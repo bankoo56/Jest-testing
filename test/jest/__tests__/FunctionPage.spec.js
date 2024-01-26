@@ -45,3 +45,22 @@ test('trigger click event on button ', async () => {
   await button.trigger('click')
   expect(wrapper.vm.addition(1,2)).toBe(3)
 })
+
+//Check fistName lastName studentCode
+test('should contain FirstName is "Pongsagon"', () => {
+    const wrapper = shallowMount(FunctionPage)
+    const textContent = wrapper.text() // ดึงข้อความทั้งหมดที่อยู่ใน component
+    expect(textContent).toContain('Pongsagon')
+})
+
+test('should contain LastName is "Koonsena"', () => {
+    const wrapper = shallowMount(FunctionPage)
+    const textContent = wrapper.text() // ดึงข้อความทั้งหมดที่อยู่ใน component
+    expect(textContent).toContain('Koonsena')
+})
+
+test('should contain StudentCode is 6404101365', () => {
+    const wrapper = shallowMount(FunctionPage)
+    const textContent = wrapper.text() // ดึงข้อความทั้งหมดที่อยู่ใน component
+    expect(textContent).toContain('6404101365')
+})
